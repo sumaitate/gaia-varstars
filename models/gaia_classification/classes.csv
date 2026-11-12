@@ -1,72 +1,44 @@
 model,feature_set,class_name,recall_mean,recall_min,recall_max
-HGB,add_brightness_noise,Cepheid,0.5412,0.508,0.568
-HGB,add_brightness_noise,Eclipsing Binary,0.65,0.644,0.656
-HGB,add_brightness_noise,Long-Period Variable,0.7672000000000001,0.764,0.772
-HGB,add_brightness_noise,RR Lyrae,0.5707112970711297,0.5564853556485355,0.5815899581589958
-HGB,add_color,Cepheid,0.316,0.292,0.334
-HGB,add_color,Eclipsing Binary,0.5376000000000001,0.52,0.554
-HGB,add_color,Long-Period Variable,0.8363999999999999,0.818,0.848
-HGB,add_color,RR Lyrae,0.2690376569037657,0.2594142259414226,0.2824267782426778
-HGB,add_period,Cepheid,0.93,0.924,0.934
-HGB,add_period,Eclipsing Binary,0.8160000000000001,0.806,0.824
-HGB,add_period,Long-Period Variable,0.9248000000000001,0.92,0.93
-HGB,add_period,RR Lyrae,0.8820083682008368,0.8786610878661087,0.8849372384937239
-HGB,add_sampling,Cepheid,0.6392,0.624,0.66
-HGB,add_sampling,Eclipsing Binary,0.1792,0.164,0.186
-HGB,add_sampling,Long-Period Variable,0.1476,0.13,0.16
-HGB,add_sampling,RR Lyrae,0.5845188284518829,0.5669456066945606,0.604602510460251
-HGB,add_shape,Cepheid,0.5316000000000001,0.522,0.54
-HGB,add_shape,Eclipsing Binary,0.7144,0.706,0.72
-HGB,add_shape,Long-Period Variable,0.5768,0.568,0.592
-HGB,add_shape,RR Lyrae,0.6330543933054393,0.6255230125523012,0.6485355648535565
-HGB,add_timescale,Cepheid,0.8452,0.834,0.854
-HGB,add_timescale,Eclipsing Binary,0.7836000000000001,0.776,0.788
-HGB,add_timescale,Long-Period Variable,0.9224,0.92,0.926
-HGB,add_timescale,RR Lyrae,0.7661087866108787,0.7510460251046025,0.7824267782426778
+Dummy,full,Cepheid,0.274,0.248,0.294
+Dummy,full,Eclipsing Binary,0.2032,0.19,0.218
+Dummy,full,Long-Period Variable,0.26080000000000003,0.232,0.276
+Dummy,full,RR Lyrae,0.23221757322175735,0.22384937238493724,0.23640167364016737
+HGB,A_metadata,Cepheid,0.5356,0.528,0.546
+HGB,A_metadata,Eclipsing Binary,0.62,0.61,0.626
+HGB,A_metadata,Long-Period Variable,0.8315999999999999,0.818,0.844
+HGB,A_metadata,RR Lyrae,0.4405857740585774,0.4205020920502092,0.45188284518828453
+HGB,B_stats,Cepheid,0.524,0.504,0.542
+HGB,B_stats,Eclipsing Binary,0.7028,0.698,0.708
+HGB,B_stats,Long-Period Variable,0.572,0.564,0.586
+HGB,B_stats,RR Lyrae,0.6380753138075314,0.6276150627615062,0.6589958158995816
+HGB,C_timedomain,Cepheid,0.9427999999999999,0.94,0.946
+HGB,C_timedomain,Eclipsing Binary,0.9336,0.93,0.938
+HGB,C_timedomain,Long-Period Variable,0.9431999999999998,0.938,0.95
+HGB,C_timedomain,RR Lyrae,0.9489539748953975,0.9476987447698745,0.9518828451882845
+HGB,D_full,Cepheid,0.9512,0.944,0.962
+HGB,D_full,Eclipsing Binary,0.9704,0.966,0.974
+HGB,D_full,Long-Period Variable,0.9648,0.96,0.968
+HGB,D_full,RR Lyrae,0.9485355648535565,0.9456066945606695,0.9539748953974896
 HGB,color_amp,Cepheid,0.3532,0.338,0.37
 HGB,color_amp,Eclipsing Binary,0.5656,0.558,0.574
 HGB,color_amp,Long-Period Variable,0.7832000000000001,0.776,0.79
 HGB,color_amp,RR Lyrae,0.46903765690376564,0.4581589958158996,0.48326359832635984
+HGB,drop_amplitude,Cepheid,0.9623999999999999,0.96,0.966
+HGB,drop_amplitude,Eclipsing Binary,0.982,0.98,0.984
+HGB,drop_amplitude,Long-Period Variable,0.9904,0.988,0.992
+HGB,drop_amplitude,RR Lyrae,0.9573221757322177,0.9539748953974896,0.9623430962343096
+HGB,drop_fourier_amp,Cepheid,0.9616,0.958,0.964
+HGB,drop_fourier_amp,Eclipsing Binary,0.9815999999999999,0.98,0.982
+HGB,drop_fourier_amp,Long-Period Variable,0.9904,0.99,0.992
+HGB,drop_fourier_amp,RR Lyrae,0.9581589958158997,0.9539748953974896,0.9623430962343096
+HGB,drop_magnitude_std,Cepheid,0.9623999999999999,0.958,0.966
+HGB,drop_magnitude_std,Eclipsing Binary,0.9808,0.98,0.982
+HGB,drop_magnitude_std,Long-Period Variable,0.9904,0.99,0.992
+HGB,drop_magnitude_std,RR Lyrae,0.9581589958158997,0.9539748953974896,0.9602510460251046
 HGB,full,Cepheid,0.9616,0.954,0.966
 HGB,full,Eclipsing Binary,0.9812,0.978,0.982
 HGB,full,Long-Period Variable,0.9904,0.99,0.992
 HGB,full,RR Lyrae,0.9594142259414227,0.9560669456066946,0.9623430962343096
-HGB,full_plus_sampling,Cepheid,0.9608000000000001,0.956,0.964
-HGB,full_plus_sampling,Eclipsing Binary,0.962,0.96,0.964
-HGB,full_plus_sampling,Long-Period Variable,0.9843999999999999,0.984,0.986
-HGB,full_plus_sampling,RR Lyrae,0.9635983263598327,0.9602510460251046,0.9665271966527197
-HGB,intrinsic,Cepheid,0.9583999999999999,0.956,0.96
-HGB,intrinsic,Eclipsing Binary,0.9768000000000001,0.974,0.98
-HGB,intrinsic,Long-Period Variable,0.9904,0.988,0.992
-HGB,intrinsic,RR Lyrae,0.9543933054393305,0.9497907949790795,0.9602510460251046
-HGB,leave_brightness_noise,Cepheid,0.9583999999999999,0.956,0.96
-HGB,leave_brightness_noise,Eclipsing Binary,0.9768000000000001,0.974,0.98
-HGB,leave_brightness_noise,Long-Period Variable,0.9904,0.988,0.992
-HGB,leave_brightness_noise,RR Lyrae,0.9543933054393305,0.9497907949790795,0.9602510460251046
-HGB,leave_color,Cepheid,0.9555999999999999,0.954,0.958
-HGB,leave_color,Eclipsing Binary,0.9823999999999999,0.98,0.984
-HGB,leave_color,Long-Period Variable,0.9832000000000001,0.98,0.986
-HGB,leave_color,RR Lyrae,0.9598326359832636,0.9560669456066946,0.9623430962343096
-HGB,leave_period,Cepheid,0.9136000000000001,0.904,0.922
-HGB,leave_period,Eclipsing Binary,0.9548,0.95,0.96
-HGB,leave_period,Long-Period Variable,0.9608000000000001,0.958,0.964
-HGB,leave_period,RR Lyrae,0.9213389121338913,0.9163179916317992,0.9225941422594143
-HGB,leave_sampling,Cepheid,0.9616,0.954,0.966
-HGB,leave_sampling,Eclipsing Binary,0.9812,0.978,0.982
-HGB,leave_sampling,Long-Period Variable,0.9904,0.99,0.992
-HGB,leave_sampling,RR Lyrae,0.9594142259414227,0.9560669456066946,0.9623430962343096
-HGB,leave_shape,Cepheid,0.9551999999999999,0.95,0.96
-HGB,leave_shape,Eclipsing Binary,0.922,0.918,0.926
-HGB,leave_shape,Long-Period Variable,0.9892,0.988,0.99
-HGB,leave_shape,RR Lyrae,0.9330543933054394,0.9288702928870293,0.9372384937238494
-HGB,leave_timescale,Cepheid,0.9596,0.954,0.966
-HGB,leave_timescale,Eclipsing Binary,0.982,0.978,0.984
-HGB,leave_timescale,Long-Period Variable,0.9836,0.98,0.988
-HGB,leave_timescale,RR Lyrae,0.9594142259414227,0.9560669456066946,0.9623430962343096
-HGB,no_indicators,Cepheid,0.9616,0.954,0.966
-HGB,no_indicators,Eclipsing Binary,0.9812,0.978,0.982
-HGB,no_indicators,Long-Period Variable,0.9904,0.99,0.992
-HGB,no_indicators,RR Lyrae,0.9594142259414227,0.9560669456066946,0.9623430962343096
 HGB,oracle,Cepheid,0.9655999999999999,0.958,0.97
 HGB,oracle,Eclipsing Binary,0.9896,0.988,0.992
 HGB,oracle,Long-Period Variable,0.9948,0.994,0.996
@@ -75,22 +47,46 @@ HGB,period_free,Cepheid,0.9136000000000001,0.904,0.922
 HGB,period_free,Eclipsing Binary,0.9548,0.95,0.96
 HGB,period_free,Long-Period Variable,0.9608000000000001,0.958,0.964
 HGB,period_free,RR Lyrae,0.9213389121338913,0.9163179916317992,0.9225941422594143
+LR,full,Cepheid,0.9480000000000001,0.944,0.954
+LR,full,Eclipsing Binary,0.9328,0.93,0.938
+LR,full,Long-Period Variable,0.9655999999999999,0.964,0.97
+LR,full,RR Lyrae,0.899163179916318,0.895397489539749,0.9016736401673641
+RF,A_metadata,Cepheid,0.5896,0.586,0.592
+RF,A_metadata,Eclipsing Binary,0.6508,0.646,0.658
+RF,A_metadata,Long-Period Variable,0.8795999999999999,0.868,0.886
+RF,A_metadata,RR Lyrae,0.42050209205020916,0.4121338912133891,0.42887029288702927
+RF,B_stats,Cepheid,0.552,0.538,0.57
+RF,B_stats,Eclipsing Binary,0.738,0.732,0.744
+RF,B_stats,Long-Period Variable,0.5688,0.564,0.574
+RF,B_stats,RR Lyrae,0.6560669456066945,0.6464435146443515,0.6652719665271967
+RF,C_timedomain,Cepheid,0.93,0.928,0.934
+RF,C_timedomain,Eclipsing Binary,0.9312000000000001,0.924,0.936
+RF,C_timedomain,Long-Period Variable,0.9576,0.956,0.96
+RF,C_timedomain,RR Lyrae,0.9405857740585774,0.9393305439330544,0.9435146443514645
+RF,D_full,Cepheid,0.9427999999999999,0.93,0.95
+RF,D_full,Eclipsing Binary,0.9743999999999999,0.968,0.98
+RF,D_full,Long-Period Variable,0.9783999999999999,0.976,0.982
+RF,D_full,RR Lyrae,0.9472803347280335,0.9435146443514645,0.9497907949790795
 RF,color_amp,Cepheid,0.35839999999999994,0.352,0.364
 RF,color_amp,Eclipsing Binary,0.6164,0.612,0.618
 RF,color_amp,Long-Period Variable,0.8108000000000001,0.806,0.818
 RF,color_amp,RR Lyrae,0.47740585774058575,0.46234309623430964,0.49581589958158995
+RF,drop_amplitude,Cepheid,0.9548,0.95,0.96
+RF,drop_amplitude,Eclipsing Binary,0.9772000000000001,0.974,0.98
+RF,drop_amplitude,Long-Period Variable,0.994,0.994,0.994
+RF,drop_amplitude,RR Lyrae,0.9594142259414227,0.9539748953974896,0.9623430962343096
+RF,drop_fourier_amp,Cepheid,0.9555999999999999,0.954,0.956
+RF,drop_fourier_amp,Eclipsing Binary,0.9768000000000001,0.976,0.978
+RF,drop_fourier_amp,Long-Period Variable,0.9952,0.994,0.996
+RF,drop_fourier_amp,RR Lyrae,0.9548117154811715,0.9518828451882845,0.9560669456066946
+RF,drop_magnitude_std,Cepheid,0.9564,0.956,0.958
+RF,drop_magnitude_std,Eclipsing Binary,0.9783999999999999,0.976,0.98
+RF,drop_magnitude_std,Long-Period Variable,0.9948,0.994,0.996
+RF,drop_magnitude_std,RR Lyrae,0.9564853556485357,0.9539748953974896,0.9602510460251046
 RF,full,Cepheid,0.9571999999999999,0.956,0.958
 RF,full,Eclipsing Binary,0.9788,0.978,0.98
 RF,full,Long-Period Variable,0.9960000000000001,0.996,0.996
 RF,full,RR Lyrae,0.9560669456066947,0.9539748953974896,0.9602510460251046
-RF,full_plus_sampling,Cepheid,0.9527999999999999,0.948,0.956
-RF,full_plus_sampling,Eclipsing Binary,0.9288000000000001,0.924,0.934
-RF,full_plus_sampling,Long-Period Variable,0.9948,0.994,0.996
-RF,full_plus_sampling,RR Lyrae,0.9623430962343097,0.9560669456066946,0.9665271966527197
-RF,intrinsic,Cepheid,0.9480000000000001,0.944,0.952
-RF,intrinsic,Eclipsing Binary,0.9776,0.974,0.98
-RF,intrinsic,Long-Period Variable,0.9936,0.992,0.994
-RF,intrinsic,RR Lyrae,0.9531380753138075,0.9497907949790795,0.9560669456066946
 RF,oracle,Cepheid,0.9587999999999999,0.956,0.962
 RF,oracle,Eclipsing Binary,0.9884000000000001,0.984,0.992
 RF,oracle,Long-Period Variable,0.9964000000000001,0.994,0.998

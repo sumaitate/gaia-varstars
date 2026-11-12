@@ -83,9 +83,5 @@
   },
   "sky_group": "Gaia feature-engineering sky cells",
   "period_reference": "Gaia DR3 published period",
-  "recovery_rule": "phase drift <= 0.25 cycles",
-  "field_cones": {
-    "LMC": 8.0,
-    "SMC": 5.0
-  }
+  "recovery_rule": "phase drift <= 0.25 cycles"
 }
