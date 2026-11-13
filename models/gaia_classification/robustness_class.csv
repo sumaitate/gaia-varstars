@@ -1,0 +1,217 @@
+model,feature_set,bin,level,class_name,n_stars,recall
+RF,full,n_obs_bin,low,RR Lyrae,227,0.958590308370044
+RF,full,n_obs_bin,low,Cepheid,165,0.9696969696969697
+RF,full,n_obs_bin,low,Eclipsing Binary,194,0.965979381443299
+RF,full,n_obs_bin,low,Long-Period Variable,129,0.9922480620155039
+RF,full,n_obs_bin,medium,RR Lyrae,126,0.9444444444444444
+RF,full,n_obs_bin,medium,Cepheid,190,0.9768421052631578
+RF,full,n_obs_bin,medium,Eclipsing Binary,122,0.9836065573770492
+RF,full,n_obs_bin,medium,Long-Period Variable,173,0.9942196531791907
+RF,full,n_obs_bin,high,RR Lyrae,125,0.9632
+RF,full,n_obs_bin,high,Cepheid,145,0.9172413793103448
+RF,full,n_obs_bin,high,Eclipsing Binary,184,0.9891304347826086
+RF,full,n_obs_bin,high,Long-Period Variable,198,1.0
+RF,full,g_mag_bin,bright,RR Lyrae,47,0.9446808510638298
+RF,full,g_mag_bin,bright,Cepheid,205,0.9629268292682926
+RF,full,g_mag_bin,bright,Eclipsing Binary,73,0.9452054794520548
+RF,full,g_mag_bin,bright,Long-Period Variable,335,0.9970149253731343
+RF,full,g_mag_bin,middle,RR Lyrae,145,0.9158620689655173
+RF,full,g_mag_bin,middle,Cepheid,258,0.9658914728682171
+RF,full,g_mag_bin,middle,Eclipsing Binary,100,0.98
+RF,full,g_mag_bin,middle,Long-Period Variable,156,0.9935897435897436
+RF,full,g_mag_bin,faint,RR Lyrae,286,0.9783216783216783
+RF,full,g_mag_bin,faint,Cepheid,37,0.8648648648648649
+RF,full,g_mag_bin,faint,Eclipsing Binary,327,0.9859327217125382
+RF,full,g_mag_bin,faint,Long-Period Variable,9,1.0
+RF,full,label_cohort,general_class_agrees,RR Lyrae,477,0.9559748427672956
+RF,full,label_cohort,general_class_agrees,Cepheid,499,0.9591182364729459
+RF,full,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9788
+RF,full,label_cohort,general_class_agrees,Long-Period Variable,500,0.996
+RF,full,label_cohort,score>=0.5,RR Lyrae,256,0.99609375
+RF,full,label_cohort,score>=0.5,Cepheid,255,0.9952941176470588
+RF,full,label_cohort,score>=0.5,Eclipsing Binary,325,0.9938461538461538
+RF,full,label_cohort,score>=0.5,Long-Period Variable,470,1.0
+RF,full,label_cohort,score>=0.9,RR Lyrae,51,1.0
+RF,full,label_cohort,score>=0.9,Cepheid,32,1.0
+RF,full,label_cohort,score>=0.9,Eclipsing Binary,87,1.0
+RF,full,label_cohort,score>=0.9,Long-Period Variable,202,1.0
+RF,C_timedomain,n_obs_bin,low,RR Lyrae,227,0.9277533039647577
+RF,C_timedomain,n_obs_bin,low,Cepheid,165,0.9357575757575758
+RF,C_timedomain,n_obs_bin,low,Eclipsing Binary,194,0.8814432989690721
+RF,C_timedomain,n_obs_bin,low,Long-Period Variable,129,0.9038759689922481
+RF,C_timedomain,n_obs_bin,medium,RR Lyrae,126,0.9285714285714286
+RF,C_timedomain,n_obs_bin,medium,Cepheid,190,0.9284210526315789
+RF,C_timedomain,n_obs_bin,medium,Eclipsing Binary,122,0.9426229508196722
+RF,C_timedomain,n_obs_bin,medium,Long-Period Variable,173,0.9722543352601156
+RF,C_timedomain,n_obs_bin,high,RR Lyrae,125,0.976
+RF,C_timedomain,n_obs_bin,high,Cepheid,145,0.9255172413793104
+RF,C_timedomain,n_obs_bin,high,Eclipsing Binary,184,0.9760869565217392
+RF,C_timedomain,n_obs_bin,high,Long-Period Variable,198,0.9797979797979798
+RF,C_timedomain,g_mag_bin,bright,RR Lyrae,47,1.0
+RF,C_timedomain,g_mag_bin,bright,Cepheid,205,0.9404878048780487
+RF,C_timedomain,g_mag_bin,bright,Eclipsing Binary,73,0.9534246575342465
+RF,C_timedomain,g_mag_bin,bright,Long-Period Variable,335,0.9594029850746268
+RF,C_timedomain,g_mag_bin,middle,RR Lyrae,145,0.9241379310344827
+RF,C_timedomain,g_mag_bin,middle,Cepheid,258,0.9325581395348838
+RF,C_timedomain,g_mag_bin,middle,Eclipsing Binary,100,0.994
+RF,C_timedomain,g_mag_bin,middle,Long-Period Variable,156,0.9538461538461539
+RF,C_timedomain,g_mag_bin,faint,RR Lyrae,286,0.9391608391608391
+RF,C_timedomain,g_mag_bin,faint,Cepheid,37,0.8540540540540541
+RF,C_timedomain,g_mag_bin,faint,Eclipsing Binary,327,0.9070336391437309
+RF,C_timedomain,g_mag_bin,faint,Long-Period Variable,9,0.9555555555555556
+RF,C_timedomain,label_cohort,general_class_agrees,RR Lyrae,477,0.9404612159329141
+RF,C_timedomain,label_cohort,general_class_agrees,Cepheid,499,0.9318637274549099
+RF,C_timedomain,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9312
+RF,C_timedomain,label_cohort,general_class_agrees,Long-Period Variable,500,0.9576
+RF,C_timedomain,label_cohort,score>=0.5,RR Lyrae,256,0.9921875
+RF,C_timedomain,label_cohort,score>=0.5,Cepheid,255,0.9913725490196078
+RF,C_timedomain,label_cohort,score>=0.5,Eclipsing Binary,325,0.9870769230769231
+RF,C_timedomain,label_cohort,score>=0.5,Long-Period Variable,470,0.9591489361702128
+RF,C_timedomain,label_cohort,score>=0.9,RR Lyrae,51,1.0
+RF,C_timedomain,label_cohort,score>=0.9,Cepheid,32,1.0
+RF,C_timedomain,label_cohort,score>=0.9,Eclipsing Binary,87,0.9908045977011494
+RF,C_timedomain,label_cohort,score>=0.9,Long-Period Variable,202,0.9772277227722772
+RF,D_full,n_obs_bin,low,RR Lyrae,227,0.9374449339207048
+RF,D_full,n_obs_bin,low,Cepheid,165,0.9551515151515152
+RF,D_full,n_obs_bin,low,Eclipsing Binary,194,0.954639175257732
+RF,D_full,n_obs_bin,low,Long-Period Variable,129,0.9534883720930233
+RF,D_full,n_obs_bin,medium,RR Lyrae,126,0.9301587301587302
+RF,D_full,n_obs_bin,medium,Cepheid,190,0.9547368421052631
+RF,D_full,n_obs_bin,medium,Eclipsing Binary,122,0.9770491803278688
+RF,D_full,n_obs_bin,medium,Long-Period Variable,173,0.9734104046242774
+RF,D_full,n_obs_bin,high,RR Lyrae,125,0.9824
+RF,D_full,n_obs_bin,high,Cepheid,145,0.9131034482758621
+RF,D_full,n_obs_bin,high,Eclipsing Binary,184,0.9934782608695653
+RF,D_full,n_obs_bin,high,Long-Period Variable,198,0.998989898989899
+RF,D_full,g_mag_bin,bright,RR Lyrae,47,0.9957446808510638
+RF,D_full,g_mag_bin,bright,Cepheid,205,0.9434146341463414
+RF,D_full,g_mag_bin,bright,Eclipsing Binary,73,0.9506849315068493
+RF,D_full,g_mag_bin,bright,Long-Period Variable,335,0.9898507462686568
+RF,D_full,g_mag_bin,middle,RR Lyrae,145,0.9282758620689655
+RF,D_full,g_mag_bin,middle,Cepheid,258,0.9534883720930233
+RF,D_full,g_mag_bin,middle,Eclipsing Binary,100,0.996
+RF,D_full,g_mag_bin,middle,Long-Period Variable,156,0.9525641025641025
+RF,D_full,g_mag_bin,faint,RR Lyrae,286,0.948951048951049
+RF,D_full,g_mag_bin,faint,Cepheid,37,0.8648648648648649
+RF,D_full,g_mag_bin,faint,Eclipsing Binary,327,0.9730886850152906
+RF,D_full,g_mag_bin,faint,Long-Period Variable,9,1.0
+RF,D_full,label_cohort,general_class_agrees,RR Lyrae,477,0.9471698113207547
+RF,D_full,label_cohort,general_class_agrees,Cepheid,499,0.944689378757515
+RF,D_full,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9744
+RF,D_full,label_cohort,general_class_agrees,Long-Period Variable,500,0.9784
+RF,D_full,label_cohort,score>=0.5,RR Lyrae,256,0.99140625
+RF,D_full,label_cohort,score>=0.5,Cepheid,255,0.9945098039215686
+RF,D_full,label_cohort,score>=0.5,Eclipsing Binary,325,0.9969230769230769
+RF,D_full,label_cohort,score>=0.5,Long-Period Variable,470,0.9859574468085106
+RF,D_full,label_cohort,score>=0.9,RR Lyrae,51,1.0
+RF,D_full,label_cohort,score>=0.9,Cepheid,32,1.0
+RF,D_full,label_cohort,score>=0.9,Eclipsing Binary,87,0.9977011494252873
+RF,D_full,label_cohort,score>=0.9,Long-Period Variable,202,0.995049504950495
+HGB,full,n_obs_bin,low,RR Lyrae,227,0.9533039647577093
+HGB,full,n_obs_bin,low,Cepheid,165,0.9757575757575757
+HGB,full,n_obs_bin,low,Eclipsing Binary,194,0.9742268041237113
+HGB,full,n_obs_bin,low,Long-Period Variable,129,0.9844961240310077
+HGB,full,n_obs_bin,medium,RR Lyrae,126,0.9587301587301588
+HGB,full,n_obs_bin,medium,Cepheid,190,0.9863157894736843
+HGB,full,n_obs_bin,medium,Eclipsing Binary,122,0.9901639344262295
+HGB,full,n_obs_bin,medium,Long-Period Variable,173,0.991907514450867
+HGB,full,n_obs_bin,high,RR Lyrae,125,0.9712
+HGB,full,n_obs_bin,high,Cepheid,145,0.9131034482758621
+HGB,full,n_obs_bin,high,Eclipsing Binary,184,0.9826086956521739
+HGB,full,n_obs_bin,high,Long-Period Variable,198,0.9929292929292929
+HGB,full,g_mag_bin,bright,RR Lyrae,47,0.9574468085106383
+HGB,full,g_mag_bin,bright,Cepheid,205,0.9697560975609756
+HGB,full,g_mag_bin,bright,Eclipsing Binary,73,0.9452054794520548
+HGB,full,g_mag_bin,bright,Long-Period Variable,335,0.9958208955223881
+HGB,full,g_mag_bin,middle,RR Lyrae,145,0.9337931034482758
+HGB,full,g_mag_bin,middle,Cepheid,258,0.9666666666666667
+HGB,full,g_mag_bin,middle,Eclipsing Binary,100,0.98
+HGB,full,g_mag_bin,middle,Long-Period Variable,156,0.9910256410256411
+HGB,full,g_mag_bin,faint,RR Lyrae,286,0.9727272727272728
+HGB,full,g_mag_bin,faint,Cepheid,37,0.8810810810810811
+HGB,full,g_mag_bin,faint,Eclipsing Binary,327,0.9896024464831804
+HGB,full,g_mag_bin,faint,Long-Period Variable,9,0.7777777777777778
+HGB,full,label_cohort,general_class_agrees,RR Lyrae,477,0.959329140461216
+HGB,full,label_cohort,general_class_agrees,Cepheid,499,0.9635270541082165
+HGB,full,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9812
+HGB,full,label_cohort,general_class_agrees,Long-Period Variable,500,0.9904
+HGB,full,label_cohort,score>=0.5,RR Lyrae,256,0.996875
+HGB,full,label_cohort,score>=0.5,Cepheid,255,0.9890196078431372
+HGB,full,label_cohort,score>=0.5,Eclipsing Binary,325,0.9969230769230769
+HGB,full,label_cohort,score>=0.5,Long-Period Variable,470,0.9940425531914894
+HGB,full,label_cohort,score>=0.9,RR Lyrae,51,1.0
+HGB,full,label_cohort,score>=0.9,Cepheid,32,0.99375
+HGB,full,label_cohort,score>=0.9,Eclipsing Binary,87,1.0
+HGB,full,label_cohort,score>=0.9,Long-Period Variable,202,1.0
+HGB,C_timedomain,n_obs_bin,low,RR Lyrae,227,0.9330396475770925
+HGB,C_timedomain,n_obs_bin,low,Cepheid,165,0.9490909090909091
+HGB,C_timedomain,n_obs_bin,low,Eclipsing Binary,194,0.8876288659793814
+HGB,C_timedomain,n_obs_bin,low,Long-Period Variable,129,0.8372093023255814
+HGB,C_timedomain,n_obs_bin,medium,RR Lyrae,126,0.9523809523809523
+HGB,C_timedomain,n_obs_bin,medium,Cepheid,190,0.9368421052631579
+HGB,C_timedomain,n_obs_bin,medium,Eclipsing Binary,122,0.9524590163934427
+HGB,C_timedomain,n_obs_bin,medium,Long-Period Variable,173,0.9641618497109826
+HGB,C_timedomain,n_obs_bin,high,RR Lyrae,125,0.9744
+HGB,C_timedomain,n_obs_bin,high,Cepheid,145,0.9434482758620689
+HGB,C_timedomain,n_obs_bin,high,Eclipsing Binary,184,0.9695652173913043
+HGB,C_timedomain,n_obs_bin,high,Long-Period Variable,198,0.9939393939393939
+HGB,C_timedomain,g_mag_bin,bright,RR Lyrae,47,1.0
+HGB,C_timedomain,g_mag_bin,bright,Cepheid,205,0.9560975609756097
+HGB,C_timedomain,g_mag_bin,bright,Eclipsing Binary,73,0.9452054794520548
+HGB,C_timedomain,g_mag_bin,bright,Long-Period Variable,335,0.951044776119403
+HGB,C_timedomain,g_mag_bin,middle,RR Lyrae,145,0.9406896551724138
+HGB,C_timedomain,g_mag_bin,middle,Cepheid,258,0.9457364341085271
+HGB,C_timedomain,g_mag_bin,middle,Eclipsing Binary,100,0.97
+HGB,C_timedomain,g_mag_bin,middle,Long-Period Variable,156,0.9294871794871795
+HGB,C_timedomain,g_mag_bin,faint,RR Lyrae,286,0.9447552447552447
+HGB,C_timedomain,g_mag_bin,faint,Cepheid,37,0.8486486486486486
+HGB,C_timedomain,g_mag_bin,faint,Eclipsing Binary,327,0.9198776758409786
+HGB,C_timedomain,g_mag_bin,faint,Long-Period Variable,9,0.8888888888888888
+HGB,C_timedomain,label_cohort,general_class_agrees,RR Lyrae,477,0.9488469601677149
+HGB,C_timedomain,label_cohort,general_class_agrees,Cepheid,499,0.944689378757515
+HGB,C_timedomain,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9336
+HGB,C_timedomain,label_cohort,general_class_agrees,Long-Period Variable,500,0.9432
+HGB,C_timedomain,label_cohort,score>=0.5,RR Lyrae,256,0.996875
+HGB,C_timedomain,label_cohort,score>=0.5,Cepheid,255,0.996078431372549
+HGB,C_timedomain,label_cohort,score>=0.5,Eclipsing Binary,325,0.9821538461538462
+HGB,C_timedomain,label_cohort,score>=0.5,Long-Period Variable,470,0.9446808510638298
+HGB,C_timedomain,label_cohort,score>=0.9,RR Lyrae,51,1.0
+HGB,C_timedomain,label_cohort,score>=0.9,Cepheid,32,1.0
+HGB,C_timedomain,label_cohort,score>=0.9,Eclipsing Binary,87,0.9977011494252873
+HGB,C_timedomain,label_cohort,score>=0.9,Long-Period Variable,202,0.9693069306930693
+HGB,D_full,n_obs_bin,low,RR Lyrae,227,0.933920704845815
+HGB,D_full,n_obs_bin,low,Cepheid,165,0.96
+HGB,D_full,n_obs_bin,low,Eclipsing Binary,194,0.9484536082474226
+HGB,D_full,n_obs_bin,low,Long-Period Variable,129,0.9147286821705426
+HGB,D_full,n_obs_bin,medium,RR Lyrae,126,0.946031746031746
+HGB,D_full,n_obs_bin,medium,Cepheid,190,0.9694736842105263
+HGB,D_full,n_obs_bin,medium,Eclipsing Binary,122,0.9754098360655737
+HGB,D_full,n_obs_bin,medium,Long-Period Variable,173,0.9630057803468208
+HGB,D_full,n_obs_bin,high,RR Lyrae,125,0.9776
+HGB,D_full,n_obs_bin,high,Cepheid,145,0.9172413793103448
+HGB,D_full,n_obs_bin,high,Eclipsing Binary,184,0.9902173913043478
+HGB,D_full,n_obs_bin,high,Long-Period Variable,198,0.998989898989899
+HGB,D_full,g_mag_bin,bright,RR Lyrae,47,1.0
+HGB,D_full,g_mag_bin,bright,Cepheid,205,0.9512195121951219
+HGB,D_full,g_mag_bin,bright,Eclipsing Binary,73,0.947945205479452
+HGB,D_full,g_mag_bin,bright,Long-Period Variable,335,0.9874626865671642
+HGB,D_full,g_mag_bin,middle,RR Lyrae,145,0.9365517241379311
+HGB,D_full,g_mag_bin,middle,Cepheid,258,0.9596899224806201
+HGB,D_full,g_mag_bin,middle,Eclipsing Binary,100,0.99
+HGB,D_full,g_mag_bin,middle,Long-Period Variable,156,0.9205128205128205
+HGB,D_full,g_mag_bin,faint,RR Lyrae,286,0.9461538461538461
+HGB,D_full,g_mag_bin,faint,Cepheid,37,0.8918918918918919
+HGB,D_full,g_mag_bin,faint,Eclipsing Binary,327,0.9694189602446484
+HGB,D_full,g_mag_bin,faint,Long-Period Variable,9,0.8888888888888888
+HGB,D_full,label_cohort,general_class_agrees,RR Lyrae,477,0.9484276729559749
+HGB,D_full,label_cohort,general_class_agrees,Cepheid,499,0.9531062124248497
+HGB,D_full,label_cohort,general_class_agrees,Eclipsing Binary,500,0.9704
+HGB,D_full,label_cohort,general_class_agrees,Long-Period Variable,500,0.9648
+HGB,D_full,label_cohort,score>=0.5,RR Lyrae,256,0.996875
+HGB,D_full,label_cohort,score>=0.5,Cepheid,255,0.9913725490196078
+HGB,D_full,label_cohort,score>=0.5,Eclipsing Binary,325,0.9932307692307693
+HGB,D_full,label_cohort,score>=0.5,Long-Period Variable,470,0.9757446808510638
+HGB,D_full,label_cohort,score>=0.9,RR Lyrae,51,1.0
+HGB,D_full,label_cohort,score>=0.9,Cepheid,32,1.0
+HGB,D_full,label_cohort,score>=0.9,Eclipsing Binary,87,1.0
+HGB,D_full,label_cohort,score>=0.9,Long-Period Variable,202,0.994059405940594
