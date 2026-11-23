@@ -41,11 +41,15 @@ How accurately can interpretable features extracted from sparse Gaia DR3 light c
 
 ### Features
 
-About 45 features per star: magnitude statistics, Lomb-Scargle period and power, Fourier amplitude ratios, structure-function and timescale features, and BP-RP color. Gaia's published periods are used only for validation, never as inputs.
+About 45 features per star: magnitude statistics, Lomb-Scargle period and power, Fourier amplitude ratios, structure-function and timescale features, and BP-RP color. 
+
+Gaia's published periods are used only for validation.
 
 ### Evaluation
 
-5×5 repeated cross-validation grouped by HEALPix sky cell, so the model cannot learn sky position. Hyperparameters were fixed in advance and not tuned. Confidence intervals come from a sky-cell cluster bootstrap (1,500 replicates).
+* 5×5 repeated cross-validation grouped by HEALPix sky cell, so the model can't learn sky position. 
+* Hyperparameters were fixed in advance and not tuned. 
+* Confidence intervals come from a sky-cell cluster bootstrap (1,500 replicates).
 
 ---
 
@@ -66,7 +70,7 @@ About 45 features per star: magnitude statistics, Lomb-Scargle period and power,
 | Time-domain + color | 0.95 |
 | All feature families | 0.97 |
 
-![Confusion matrix](reports/figures/gaia_classification/confusion.png)
+![Confusion Matrix](reports/figures/gaia_classification/confusion.png)
 
 Errors are astrophysically sensible: short-period Cepheids are confused with RR Lyrae, and RR Lyrae with eclipsing binaries, where sparse sampling makes curves look alike. Long-period variables are nearly perfect because they are very red.
 
