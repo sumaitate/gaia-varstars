@@ -1,95 +1,71 @@
 model,class_name,period_status,feature_set,n_stars,recall,ci_lo,ci_hi,small_cell
-RF,RR Lyrae,exact,full,392,0.9525510204081632,0.928623675598984,0.9794675761871012,False
-RF,RR Lyrae,exact,oracle,392,0.9826530612244898,0.9682117741611412,0.9982557164634145,False
+RF,RR Lyrae,exact,full,392,0.9459183673469388,0.9214055057222394,0.9745324027498323,False
+RF,RR Lyrae,exact,oracle,392,0.9836734693877551,0.9703291089497986,0.9974189648847834,False
 RF,RR Lyrae,exact,period_free,392,0.90765306122449,0.8701667845494911,0.948266339214114,False
-RF,RR Lyrae,exact,color_amp,392,0.4928571428571428,0.44593316007888895,0.5440566458519179,False
 RF,RR Lyrae,half,full,1,1.0,1.0,1.0,True
-RF,RR Lyrae,half,oracle,1,0.8,0.8,0.8,True
+RF,RR Lyrae,half,oracle,1,0.6,0.6,0.6,True
 RF,RR Lyrae,half,period_free,1,1.0,1.0,1.0,True
-RF,RR Lyrae,half,color_amp,1,0.0,0.0,0.0,True
-RF,RR Lyrae,mismatch,full,85,0.9717647058823529,0.9333333333333333,1.0,False
-RF,RR Lyrae,mismatch,oracle,85,0.9717647058823529,0.9349397590361445,0.9975162037037036,False
+RF,RR Lyrae,mismatch,full,85,0.9764705882352941,0.937866512345679,1.0,False
+RF,RR Lyrae,mismatch,oracle,85,0.9788235294117648,0.9467340425531914,1.0,False
 RF,RR Lyrae,mismatch,period_free,85,0.9764705882352941,0.9316547322540473,1.0,False
-RF,RR Lyrae,mismatch,color_amp,85,0.41176470588235303,0.30000000000000004,0.5135396879240163,False
-RF,Cepheid,exact,full,495,0.9587878787878789,0.9279740051615051,0.9754459868926969,False
-RF,Cepheid,exact,oracle,495,0.9604040404040404,0.9276581280252353,0.9756331371499911,False
+RF,Cepheid,exact,full,495,0.9430303030303031,0.9051785091998885,0.9639183229142486,False
+RF,Cepheid,exact,oracle,495,0.9604040404040404,0.9279544715447154,0.9753314259997429,False
 RF,Cepheid,exact,period_free,495,0.8997979797979797,0.8209204505248261,0.9411378299120235,False
-RF,Cepheid,exact,color_amp,495,0.3595959595959596,0.24447253929640717,0.4168781026861611,False
 RF,Cepheid,mismatch,full,5,0.8,0.25,1.0,True
 RF,Cepheid,mismatch,oracle,5,0.8,0.25,1.0,True
 RF,Cepheid,mismatch,period_free,5,0.8,0.25,1.0,True
-RF,Cepheid,mismatch,color_amp,5,0.24,0.0,0.75,True
-RF,Eclipsing Binary,exact,full,12,0.9500000000000001,0.8615384615384616,1.0,False
-RF,Eclipsing Binary,exact,oracle,12,0.5666666666666667,0.38571428571428573,0.82,False
+RF,Eclipsing Binary,exact,full,12,0.9833333333333334,0.9538461538461538,1.0,False
+RF,Eclipsing Binary,exact,oracle,12,0.5499999999999999,0.35714285714285715,0.82,False
 RF,Eclipsing Binary,exact,period_free,12,0.9833333333333334,0.9538461538461538,1.0,False
-RF,Eclipsing Binary,exact,color_amp,12,0.5833333333333334,0.25,0.9166666666666666,False
-RF,Eclipsing Binary,half,full,366,0.9754098360655737,0.9693624855602618,0.9821428571428571,False
+RF,Eclipsing Binary,half,full,366,0.9825136612021859,0.9770704634473332,0.9883289425872093,False
 RF,Eclipsing Binary,half,oracle,366,1.0,1.0,1.0,False
 RF,Eclipsing Binary,half,period_free,366,0.9382513661202185,0.9216632962588472,0.961506418896152,False
-RF,Eclipsing Binary,half,color_amp,366,0.6087431693989072,0.5046283783783784,0.6901050457572196,False
 RF,Eclipsing Binary,double,full,2,1.0,1.0,1.0,True
 RF,Eclipsing Binary,double,oracle,2,1.0,1.0,1.0,True
 RF,Eclipsing Binary,double,period_free,2,1.0,1.0,1.0,True
-RF,Eclipsing Binary,double,color_amp,2,1.0,1.0,1.0,True
-RF,Eclipsing Binary,mismatch,full,120,0.9916666666666667,0.9795676587163619,1.0,False
-RF,Eclipsing Binary,mismatch,oracle,120,0.995,0.9857941176470588,1.0,False
+RF,Eclipsing Binary,mismatch,full,120,0.9733333333333333,0.9533981847214051,0.995980808080808,False
+RF,Eclipsing Binary,mismatch,oracle,120,1.0,1.0,1.0,False
 RF,Eclipsing Binary,mismatch,period_free,120,0.9866666666666667,0.9633965991068362,1.0,False
-RF,Eclipsing Binary,mismatch,color_amp,120,0.6366666666666667,0.48471594202898555,0.7368098471986417,False
 RF,Long-Period Variable,exact,full,269,1.0,1.0,1.0,False
 RF,Long-Period Variable,exact,oracle,269,1.0,1.0,1.0,False
 RF,Long-Period Variable,exact,period_free,269,0.9442379182156134,0.8950403007052623,0.9955658800393314,False
-RF,Long-Period Variable,exact,color_amp,269,0.8193308550185873,0.6642016910723655,0.9789222427929121,False
 RF,Long-Period Variable,mismatch,full,132,0.9924242424242424,0.9681653157716987,1.0,False
 RF,Long-Period Variable,mismatch,oracle,132,1.0,1.0,1.0,False
 RF,Long-Period Variable,mismatch,period_free,132,0.953030303030303,0.91,1.0,False
-RF,Long-Period Variable,mismatch,color_amp,132,0.8196969696969697,0.6491826649495342,1.0,False
-RF,Long-Period Variable,ineligible,full,99,0.98989898989899,0.9811320754716981,1.0,False
+RF,Long-Period Variable,ineligible,full,99,1.0,1.0,1.0,False
 RF,Long-Period Variable,ineligible,period_free,99,0.9696969696969697,0.9413579067990833,1.0,False
-RF,Long-Period Variable,ineligible,color_amp,99,0.7757575757575758,0.5973242933537051,1.0,False
-HGB,RR Lyrae,exact,full,392,0.9581632653061224,0.9333333333333333,0.9863071103359232,False
-HGB,RR Lyrae,exact,oracle,392,0.9826530612244898,0.967690975955955,0.9977774479488765,False
+HGB,RR Lyrae,exact,full,392,0.9607142857142857,0.9400763052208836,0.9843327086285444,False
+HGB,RR Lyrae,exact,oracle,392,0.9836734693877551,0.9684468924248606,0.9984763300728529,False
 HGB,RR Lyrae,exact,period_free,392,0.911734693877551,0.8817656307089317,0.9433101960784314,False
-HGB,RR Lyrae,exact,color_amp,392,0.47857142857142854,0.42804356980432884,0.5345765352508471,False
 HGB,RR Lyrae,half,full,1,1.0,1.0,1.0,True
-HGB,RR Lyrae,half,oracle,1,0.8,0.8,0.8,True
+HGB,RR Lyrae,half,oracle,1,0.6,0.6,0.6,True
 HGB,RR Lyrae,half,period_free,1,1.0,1.0,1.0,True
-HGB,RR Lyrae,half,color_amp,1,0.0,0.0,0.0,True
 HGB,RR Lyrae,mismatch,full,85,0.9647058823529412,0.9240694993412385,1.0,False
-HGB,RR Lyrae,mismatch,oracle,85,0.9670588235294117,0.9300422832980972,0.9969712973593571,False
+HGB,RR Lyrae,mismatch,oracle,85,0.9670588235294117,0.9306570512820512,0.99371875,False
 HGB,RR Lyrae,mismatch,period_free,85,0.9647058823529412,0.9217634207240949,1.0,False
-HGB,RR Lyrae,mismatch,color_amp,85,0.43058823529411766,0.31842416582406474,0.5301244343891403,False
-HGB,Cepheid,exact,full,495,0.9632323232323231,0.9350074921135648,0.978969696969697,False
-HGB,Cepheid,exact,oracle,495,0.9672727272727272,0.9385256410256411,0.981197175266904,False
+HGB,Cepheid,exact,full,495,0.9636363636363636,0.9375405751708429,0.9780036680030709,False
+HGB,Cepheid,exact,oracle,495,0.9688888888888889,0.940616028708134,0.9827540388359732,False
 HGB,Cepheid,exact,period_free,495,0.9147474747474746,0.8506532051282051,0.9493055392729116,False
-HGB,Cepheid,exact,color_amp,495,0.3519191919191919,0.24708141321044544,0.4182063782645589,False
 HGB,Cepheid,mismatch,full,5,0.8,0.25,1.0,True
 HGB,Cepheid,mismatch,oracle,5,0.8,0.25,1.0,True
 HGB,Cepheid,mismatch,period_free,5,0.8,0.25,1.0,True
-HGB,Cepheid,mismatch,color_amp,5,0.48,0.19999999999999998,0.9,True
 HGB,Eclipsing Binary,exact,full,12,0.9166666666666666,0.7692307692307693,1.0,False
-HGB,Eclipsing Binary,exact,oracle,12,0.5666666666666667,0.37142857142857144,0.8400000000000001,False
+HGB,Eclipsing Binary,exact,oracle,12,0.5833333333333334,0.37142857142857144,0.8800000000000001,False
 HGB,Eclipsing Binary,exact,period_free,12,0.9666666666666667,0.9076923076923076,1.0,False
-HGB,Eclipsing Binary,exact,color_amp,12,0.7000000000000001,0.43333333333333335,0.9666666666666667,False
-HGB,Eclipsing Binary,half,full,366,0.9803278688524589,0.9759890339425589,0.98592715794723,False
+HGB,Eclipsing Binary,half,full,366,0.9797814207650273,0.9733812949640288,0.9845359916726719,False
 HGB,Eclipsing Binary,half,oracle,366,1.0,1.0,1.0,False
 HGB,Eclipsing Binary,half,period_free,366,0.9469945355191257,0.934410339256866,0.9642340425531915,False
-HGB,Eclipsing Binary,half,color_amp,366,0.553551912568306,0.4736449573239613,0.6089745453294398,False
 HGB,Eclipsing Binary,double,full,2,1.0,1.0,1.0,True
 HGB,Eclipsing Binary,double,oracle,2,1.0,1.0,1.0,True
 HGB,Eclipsing Binary,double,period_free,2,1.0,1.0,1.0,True
-HGB,Eclipsing Binary,double,color_amp,2,0.9,0.8,1.0,True
-HGB,Eclipsing Binary,mismatch,full,120,0.99,0.9789723684210527,1.0,False
-HGB,Eclipsing Binary,mismatch,oracle,120,1.0,1.0,1.0,False
+HGB,Eclipsing Binary,mismatch,full,120,0.9866666666666667,0.973989533011272,0.998375,False
+HGB,Eclipsing Binary,mismatch,oracle,120,0.9983333333333333,0.9941176470588234,1.0,False
 HGB,Eclipsing Binary,mismatch,period_free,120,0.9766666666666667,0.9656250000000001,0.9929549689440994,False
-HGB,Eclipsing Binary,mismatch,color_amp,120,0.5833333333333334,0.4246472972972973,0.6852687335729227,False
-HGB,Long-Period Variable,exact,full,269,0.9947955390334573,0.9839490222100785,1.0,False
-HGB,Long-Period Variable,exact,oracle,269,0.9977695167286245,0.9915680531788864,1.0,False
+HGB,Long-Period Variable,exact,full,269,0.9992565055762083,0.9971972742425729,1.0,False
+HGB,Long-Period Variable,exact,oracle,269,1.0,1.0,1.0,False
 HGB,Long-Period Variable,exact,period_free,269,0.9613382899628253,0.928934127632971,0.9965224295355299,False
-HGB,Long-Period Variable,exact,color_amp,269,0.8029739776951673,0.6630746098489604,0.9506711367181604,False
-HGB,Long-Period Variable,mismatch,full,132,0.9893939393939394,0.9680851063829787,1.0,False
+HGB,Long-Period Variable,mismatch,full,132,0.9833333333333334,0.9638419635990771,1.0,False
 HGB,Long-Period Variable,mismatch,oracle,132,1.0,1.0,1.0,False
 HGB,Long-Period Variable,mismatch,period_free,132,0.9454545454545454,0.8985594758064516,1.0,False
-HGB,Long-Period Variable,mismatch,color_amp,132,0.7742424242424242,0.6065806201550388,0.9787165991902834,False
 HGB,Long-Period Variable,ineligible,full,99,0.9797979797979798,0.9534883720930233,1.0,False
 HGB,Long-Period Variable,ineligible,period_free,99,0.9797979797979798,0.963753984899329,1.0,False
-HGB,Long-Period Variable,ineligible,color_amp,99,0.7414141414141415,0.5658956828345374,0.9867814207650273,False

@@ -1,8 +1,11 @@
 {
-  "model": "HGB",
+  "model": "RF",
   "sources": 1978,
   "folds": 5,
   "repeats": 5,
+  "seed": 42,
+  "bootstrap_replicates": 1500,
+  "hyperparameters_tuned": false,
   "classes": [
     "RR Lyrae",
     "Cepheid",
@@ -81,7 +84,5 @@
       "visit_gap_cv"
     ]
   },
-  "sky_group": "Gaia feature-engineering sky cells",
-  "period_reference": "Gaia DR3 published period",
-  "recovery_rule": "phase drift <= 0.25 cycles"
+  "sky_group": "HEALPix nside=16 cells"
 }
