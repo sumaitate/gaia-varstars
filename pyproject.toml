@@ -12,6 +12,8 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
+    "astropy>=8.0.1",
+    "astropy-healpix>=2.0.1",
     "astroquery>=0.4.11",
     "ipython",
     "joblib>=1.6.0",
