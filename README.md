@@ -1,6 +1,6 @@
-# Gaia Variable Star Classification
+# Machine Learning Classification of Variable Stars Using Gaia DR3 Time-Series Photometry
 
-Classifying four types of variable stars from sparse Gaia DR3 light curves, and testing whether color or light-curve shape drives accuracy.
+Classifying 4 types of variable stars from sparse Gaia DR3 light curves, and testing whether color or light-curve shape drives accuracy.
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)
