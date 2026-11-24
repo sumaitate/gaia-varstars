@@ -3,8 +3,8 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 [project]
 name = "gaia-varstars"
-version = "0.0.1"
-description = "Machine-learning classification of variable stars using features extracted from Gaia DR3 photometric light curves."
+version = "1.0.0"
+description = "Machine learning classification of variable stars using Gaia DR3 and ZTF photometry, investigating period recovery, feature importance, and cross-survey generalization."
 authors = [
   { name = "Sumaitat Ebshar" },
 ]
