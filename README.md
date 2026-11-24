@@ -1,4 +1,4 @@
-# Machine Learning Classification of Variable Stars Using Gaia DR3 and ZTF Time-Series PhotometryMachine Learning Classification of Variable Stars Using Gaia DR3 Time-Series Photometry
+# Machine Learning Classification of Variable Stars Using Gaia DR3 and ZTF Time-Series Photometry
 
 Machine learning classification of 4 variable-star classes using astronomical time-series photometry, investigating feature importance, period recovery, and cross-survey generalization.
 
