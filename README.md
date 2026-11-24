@@ -1,6 +1,6 @@
 # Machine Learning Classification of Variable Stars Using Gaia DR3 Time-Series Photometry
 
-Classifying 4 types of variable stars from sparse Gaia DR3 light curves, and testing whether color or light-curve shape drives accuracy.
+Machine learning classification of 4 variable-star classes using astronomical time-series photometry, investigating feature importance, period recovery, and cross-survey generalization.
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)
@@ -24,11 +24,13 @@ How accurately can interpretable features extracted from sparse Gaia DR3 light c
 
 ### Key Contributions
 
-- **~0.97 macro-F1** (Random Forest, out-of-fold, 1,978 stars) against 0.24 for random guessing
-- **Light-curve shape carries most of the signal:** color and brightness alone reach ~0.63, time-domain features ~0.93, everything combined ~0.97
-- **Period reliability test:** a false-alarm check blanks period features when the data do not support a period
-- **Period validation against Gaia:** eclipsing binaries mostly lock to half their true period, as expected for two eclipses per orbit, and this is reported rather than hidden
+- Gaia classification achieved 0.9737 macro-F1 and 97.38% accuracy using histogram gradient boosting.
+- Time-domain features provide substantially more classification information than brightness and color alone.
+- Classification remains effective despite inaccurate period recovery, with period-free Gaia models achieving up to 0.9376 macro-F1.
+- Cross-survey evaluation on 551 matched Gaia and ZTF sources demonstrates substantial performance deterioration under survey transfer.
+- Period-derived features improve cross-survey macro-F1 by 18.38–24.05 percentage points.
 
+  
 ![Ablation results](reports/figures/gaia_classification/ablation.png)
 
 ---
@@ -86,30 +88,130 @@ Random Forest evaluated on 449 held-out sources.
 
 Results are stored in `models/locked_test/`.
 
----
+### ZTF Extension
 
+ZTF DR24 r-band photometry was obtained for sources from the existing Gaia cohort. Of 1,978 Gaia modeling sources, 599 were matched and 551 retained after quality filtering.
+
+Both surveys use the same feature extraction implementation, 20 shared predictors, and five-fold spatial cross-validation repeated five times across 75 HEALPix regions.
+
+| Class | Matched | Eligible |
+|---|---:|---:|
+| RR Lyrae | 191 | 175 |
+| Cepheid | 73 | 70 |
+| Eclipsing Binary | 232 | 226 |
+| Long-Period Variable | 103 | 80 |
+| Total | 599 | 551 |
+
+#### Period Recovery
+
+Comparison restricted to 539 sources with searchable reference periods in both surveys.
+
+| Class | Gaia | ZTF |
+|---|---:|---:|
+| RR Lyrae | 91.4% | 53.1% |
+| Cepheid | 97.1% | 78.6% |
+| Eclipsing Binary (half-period) | 74.3% | 56.2% |
+| Long-Period Variable | 70.6% | 17.6% |
+
+![Period recovery](reports/figures/ztf/period_recovery.png)
+
+#### Cross-Survey Classification
+
+| Experiment | RF Macro-F1 | HGB Macro-F1 |
+|---|---:|---:|
+| Gaia to Gaia | 0.9362 | 0.9330 |
+| Gaia to ZTF | 0.6807 | 0.6988 |
+| ZTF to ZTF | 0.8390 | 0.8534 |
+| Gaia to ZTF (period-free) | 0.4969 | 0.4583 |
+
+![Cross-survey model comparison](reports/figures/ztf/model_comparison.png)
+
+#### Paired Macro-F1 Differences
+
+| Comparison | RF | HGB |
+|---|---:|---:|
+| Cross-survey change | -0.2555 | -0.2342 |
+| ZTF training improvement | +0.1582 | +0.1546 |
+| Period feature contribution | +0.1838 | +0.2405 |
+
+All paired 95% spatial bootstrap confidence intervals exclude zero.
+
+Cross-survey classification performance declines substantially relative to the matched Gaia baseline. Training directly on ZTF recovers much of this performance. Period-derived features remain valuable during survey transfer despite reduced agreement with catalog reference periods.
+
+Results are stored in `models/ztf/`.
+
+---
 ## Limitations
 
-- Labels are derived from Gaia DR3 class-specific catalogs and are not independently confirmed.
-- The approximately class-balanced benchmark does not reflect real Gaia class frequencies.
-- The locked test partition was established retrospectively after exploratory cross-validation.
-- External validation on ZTF is planned.
+- Gaia DR3 catalog classifications are reference labels rather than independently confirmed ground truth.
+- The selected Gaia cohort does not represent natural variable-star class frequencies.
+- The locked Gaia test partition was established retrospectively after exploratory cross-validation.
+- Sparse sampling, harmonic ambiguity, and restricted period-search ranges limit physical period recovery.
+- The phase-drift agreement criterion depends on the observational baseline.
+- The matched ZTF cohort represents 27.9% of the Gaia modeling population, with unequal coverage across classes.
+- Cross-survey differences cannot be attributed independently to cadence, passband, or measurement noise.
+- ZTF provides independent photometric observations but retains Gaia reference classifications.
 
 ---
 
 ## Reproducibility
 
+Clone the repository and install the locked environment:
+
 ```bash
 git clone https://github.com/sumaitate/gaia-varstars.git
 cd gaia-varstars
 uv sync --locked
-sha256sum -c data_sha256.txt
+shasum -a 256 -c data_sha256.txt
+```
+
+On Linux, `sha256sum -c data_sha256.txt` can be used instead.
+
+Execute the notebooks in the following order:
+
+| Order | Notebook |
+|---:|---|
+| 1 | `02_gaia_fe.ipynb` |
+| 2 | `03_gaia_validation.ipynb` |
+| 3 | `01_gaia_eda.ipynb` |
+| 4 | `04_gaia_modeling.ipynb` |
+| 5 | `05_ztf.ipynb` |
+
+Skip the final live Gaia query cell in notebook `03` and use the frozen validation data.
+
+Gaia and ZTF feature engineering share the implementation in `gaia_variable_stars/features.py`.
+
+To reproduce the locked Gaia evaluation:
+
+```bash
 uv run --locked python scripts/locked_evaluation.py evaluate
 ```
 
-For the full analysis, execute the notebooks in order: `02`, `03`, `01`, `04`. Skip the final live Gaia query cell in notebook `03` and use the frozen validation data.
+To reproduce the ZTF extension after generating the Gaia features and validation tables:
 
-Local notebook execution and all four data checksums passed. Regenerated model rankings matched the reference results within `rtol=1e-5` and `atol=1e-6`. Fresh-clone reproduction remains unverified.
+```bash
+uv run --locked jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 notebooks/05_ztf.ipynb
+```
+
+Reference results are preserved in:
+
+- `reproducibility/rank_reference.csv`
+- `reproducibility/ztf_reference.csv`
+
+The Gaia pipeline has been reproduced from a fresh clone. ZTF reproduction uses frozen photometry, fixed random seeds, shared feature definitions, and repeated spatial cross-validation.
+
+### Data Acquisition
+
+Frozen observations are provided for computational reproduction without requiring live archive queries.
+
+To retrieve observations from the astronomical archives:
+
+```bash
+uv run --locked python -m gaia_variable_stars.dataset
+uv run --locked python -m gaia_variable_stars.ztf_dataset
+```
+
+Live archive retrieval is separate from frozen-data reproduction and may return different observations if archive contents change.
 
 ---
 
@@ -122,11 +224,17 @@ Local notebook execution and all four data checksums passed. Regenerated model r
 ├── data_sha256.txt
 ├── data/
 ├── gaia_variable_stars/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── features.py
+│   └── ztf_dataset.py
 ├── notebooks/
 │   ├── 01_gaia_eda.ipynb
 │   ├── 02_gaia_fe.ipynb
 │   ├── 03_gaia_validation.ipynb
-│   └── 04_gaia_modeling.ipynb
+│   ├── 04_gaia_modeling.ipynb
+│   └── 05_ztf.ipynb
 ├── scripts/
 │   └── locked_evaluation.py
 ├── splits/
@@ -134,11 +242,14 @@ Local notebook execution and all four data checksums passed. Regenerated model r
 │   ├── validation_source_ids.csv
 │   └── test_source_ids.csv
 ├── reproducibility/
-│   └── rank_reference.csv
+│   ├── rank_reference.csv
+│   └── ztf_reference.csv
 ├── models/
-│   └── locked_test/
+│   ├── locked_test/
+│   └── ztf/
 └── reports/figures/
 ```
+
 ---
 
 ## Acknowledgments
