@@ -47,10 +47,10 @@ Gaia's published periods are used only for validation.
 
 ### Evaluation
 
-* 5×5 repeated cross-validation grouped by HEALPix sky cell, so the model can't learn sky position. 
-* Hyperparameters were fixed in advance and not tuned. 
-* Confidence intervals come from a sky-cell cluster bootstrap (1,500 replicates).
-
+- 5×5 repeated cross-validation grouped by HEALPix sky cell to reduce spatial leakage.
+- Fixed HEALPix-grouped training (1,110), validation (419), and test (449) partitions, with source IDs stored in `splits/`.
+- Fixed hyperparameters and 95% confidence intervals estimated using 1,500 sky-cell bootstrap replicates.
+  
 ---
 
 ## Results
@@ -74,38 +74,71 @@ Gaia's published periods are used only for validation.
 
 Errors are astrophysically sensible: short-period Cepheids are confused with RR Lyrae, and RR Lyrae with eclipsing binaries, where sparse sampling makes curves look alike. Long-period variables are nearly perfect because they are very red.
 
+### Locked Test Results
+
+Random Forest evaluated on 449 held-out sources.
+
+| Metric | Score | 95% CI |
+|---|---:|---:|
+| Accuracy | 0.9822 | 0.9481–0.9920 |
+| Macro-F1 | 0.9797 | 0.8089–0.9895 |
+| Balanced Accuracy | 0.9795 | 0.9747–0.9926 |
+
+Results are stored in `models/locked_test/`.
+
 ---
 
 ## Limitations
 
-- Labels come from Gaia's own classifier, so part of the task is reproducing that classifier.
-- The benchmark is class-balanced; real Gaia frequencies differ by orders of magnitude, so precision on rare classes would be lower in practice.
-- Four well-separated classes, one survey, and no separate frozen test set (evaluation is out-of-fold).
-- Planned: external validation on ZTF and a reusable feature-extraction module.
+- Labels are derived from Gaia DR3 class-specific catalogs and are not independently confirmed.
+- The approximately class-balanced benchmark does not reflect real Gaia class frequencies.
+- The locked test partition was established retrospectively after exploratory cross-validation.
+- External validation on ZTF is planned.
 
 ---
 
 ## Reproducibility
 
-To be added.
+```bash
+git clone https://github.com/sumaitate/gaia-varstars.git
+cd gaia-varstars
+uv sync --locked
+sha256sum -c data_sha256.txt
+uv run --locked python scripts/locked_evaluation.py evaluate
+```
+
+For the full analysis, execute the notebooks in order: `02`, `03`, `01`, `04`. Skip the final live Gaia query cell in notebook `03` and use the frozen validation data.
+
+Local notebook execution and all four data checksums passed. Regenerated model rankings matched the reference results within `rtol=1e-5` and `atol=1e-6`. Fresh-clone reproduction remains unverified.
 
 ---
 
 ## Repository Structure
 
-```
+```text
 ├── README.md
-├── pyproject.toml, uv.lock      
-├── gaia_variable_stars/         
+├── pyproject.toml
+├── uv.lock
+├── data_sha256.txt
+├── data/
+├── gaia_variable_stars/
 ├── notebooks/
-│   ├── 01_gaia_eda
-│   ├── 02_gaia_fe
-│   ├── 03_gaia_validation
-│   └── 04_gaia_modeling
-├── models/                      
-└── reports/figures/             
+│   ├── 01_gaia_eda.ipynb
+│   ├── 02_gaia_fe.ipynb
+│   ├── 03_gaia_validation.ipynb
+│   └── 04_gaia_modeling.ipynb
+├── scripts/
+│   └── locked_evaluation.py
+├── splits/
+│   ├── train_source_ids.csv
+│   ├── validation_source_ids.csv
+│   └── test_source_ids.csv
+├── reproducibility/
+│   └── rank_reference.csv
+├── models/
+│   └── locked_test/
+└── reports/figures/
 ```
-
 ---
 
 ## Acknowledgments
