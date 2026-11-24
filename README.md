@@ -1,4 +1,4 @@
-# Machine Learning Classification of Variable Stars Using Gaia DR3 Time-Series Photometry
+# Machine Learning Classification of Variable Stars Using Gaia DR3 and ZTF Time-Series PhotometryMachine Learning Classification of Variable Stars Using Gaia DR3 Time-Series Photometry
 
 Machine learning classification of 4 variable-star classes using astronomical time-series photometry, investigating feature importance, period recovery, and cross-survey generalization.
 
@@ -16,11 +16,13 @@ Machine learning classification of 4 variable-star classes using astronomical ti
 
 ### Problem Statement
 
-Variable stars change brightness in repeating patterns, and each type (RR Lyrae, Cepheids, eclipsing binaries, long-period variables) tells astronomers something different. RR Lyrae and Cepheids are used to measure distances across the universe. ESA's Gaia telescope has observed far too many stars to classify by hand, and each star has only about 40 irregularly spaced brightness measurements, which makes period-finding unreliable.
+Variable stars exhibit periodic or irregular changes in brightness due to different physical mechanisms. RR Lyrae and Cepheids are important for astronomical distance measurements, while eclipsing binaries and long-period variables support studies of stellar properties and evolution.
+
+Large astronomical surveys require automated classification methods. Sparse observations, irregular sampling, and overlapping light-curve characteristics complicate period estimation and classification. Differences between observational surveys further limit the generalizability of trained classifiers.
 
 ### Research Question
 
-How accurately can interpretable features extracted from sparse Gaia DR3 light curves classify these four variable-star types, and how much of the performance comes from the star's color and brightness versus the shape of its light curve?
+How accurately can interpretable features extracted from astronomical light curves classify variable stars, and how do photometric feature families, period recovery, and observational survey differences influence classification performance?
 
 ### Key Contributions
 
@@ -43,9 +45,11 @@ How accurately can interpretable features extracted from sparse Gaia DR3 light c
 
 ### Features
 
-About 45 features per star: magnitude statistics, Lomb-Scargle period and power, Fourier amplitude ratios, structure-function and timescale features, and BP-RP color. 
+43 candidate predictors were extracted per star, including magnitude statistics, Lomb–Scargle period and power, Fourier amplitude ratios, structure functions, timescale features, and BP–RP color.
 
-Gaia's published periods are used only for validation.
+The primary Gaia classification model uses 24 predictors, while the cross-survey experiments use 20 shared predictors.
+
+Published Gaia periods are reserved for period validation and the diagnostic oracle experiment. They are excluded from the primary classification models.
 
 ### Evaluation
 
@@ -57,24 +61,26 @@ Gaia's published periods are used only for validation.
 
 ## Results
 
-| Model | Macro-F1 |
-|---|---|
-| Dummy (stratified guessing) | 0.24 |
-| Logistic Regression | 0.94 |
-| Random Forest (primary) | 0.97 |
-| Gradient Boosting | 0.97 |
+| Model | Accuracy | Macro-F1 |
+|---|---:|---:|
+| Dummy (stratified guessing) | 0.2427 | 0.2418 |
+| Logistic Regression | 0.9437 | 0.9434 |
+| Random Forest (primary) | 0.9680 | 0.9678 |
+| Histogram Gradient Boosting | 0.9738 | 0.9737 |
 
 | Random Forest feature set | Macro-F1 |
-|---|---|
-| Color + mean brightness only | 0.63 |
-| Brightness statistics only | 0.63 |
-| Time-domain (statistics + period + Fourier) | 0.93 |
-| Time-domain + color | 0.95 |
-| All feature families | 0.97 |
+|---|---:|
+| Color + mean brightness only | 0.6320 |
+| Brightness statistics only | 0.6279 |
+| Time-domain (statistics + period + Fourier) | 0.9256 |
+| Time-domain + color | 0.9496 |
+| All primary feature families | 0.9678 |
 
 ![Confusion Matrix](reports/figures/gaia_classification/confusion.png)
 
-Errors are astrophysically sensible: short-period Cepheids are confused with RR Lyrae, and RR Lyrae with eclipsing binaries, where sparse sampling makes curves look alike. Long-period variables are nearly perfect because they are very red.
+Classification errors occur primarily between classes with overlapping photometric characteristics. Long-period variables exhibit the highest Random Forest recall at 99.80%.
+
+Classification remains effective without period-derived predictors, achieving macro-F1 scores of 0.9304 with Random Forest and 0.9376 with Histogram Gradient Boosting.
 
 ### Locked Test Results
 
@@ -190,7 +196,7 @@ uv run --locked python scripts/locked_evaluation.py evaluate
 To reproduce the ZTF extension after generating the Gaia features and validation tables:
 
 ```bash
-uv run --locked jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 notebooks/05_ztf.ipynb
+uv run --locked jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 notebooks/05_ztf_extension.ipynb
 ```
 
 Reference results are preserved in:
@@ -234,7 +240,7 @@ Live archive retrieval is separate from frozen-data reproduction and may return 
 │   ├── 02_gaia_fe.ipynb
 │   ├── 03_gaia_validation.ipynb
 │   ├── 04_gaia_modeling.ipynb
-│   └── 05_ztf.ipynb
+│   └── 05_ztf_extension.ipynb
 ├── scripts/
 │   └── locked_evaluation.py
 ├── splits/
@@ -256,6 +262,6 @@ Live archive retrieval is separate from frozen-data reproduction and may return 
 
 This is an undergraduate research project at the Borough of Manhattan Community College (BMCC), conducted under the supervision of Professor Iqram Hussain in the BFF research program.
 
-Data: Gaia Collaboration, *Gaia Data Release 3*, Astronomy & Astrophysics 674 (2023). This work uses data from the European Space Agency (ESA) mission Gaia.
+Data: Gaia Collaboration, *Gaia Data Release 3*, Astronomy & Astrophysics 674 (2023). This work uses data from the European Space Agency (ESA) mission Gaia. This research also uses Zwicky Transient Facility (ZTF) Data Release 24 photometry accessed through the NASA/IPAC Infrared Science Archive (IRSA).
 
 **Author:** Sumaitat Ebshar
